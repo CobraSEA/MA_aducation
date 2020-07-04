@@ -16,3 +16,5 @@ print()
 for t in range(0,len(string),3) : # more faster then previous
     print(string[t], end='')
 print()
+print(string[len(string)//2])
+print(string[-1::-1])
