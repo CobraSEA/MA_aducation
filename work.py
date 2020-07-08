@@ -25,3 +25,7 @@ print(str_p)
 print(str_l)
 print(bool(str_l & str_p))
 
+STR_P = set(list("string"))
+print(STR_P)
+STR_P = {x for x in "string"}
+print(STR_P)
