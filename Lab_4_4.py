@@ -7,8 +7,6 @@ if program get range of years, it print all leap years of the range
 '''
 
 try:
-    year_in = ''
-    is_leap = 0
     year = ''
     while year != 'exit':
         year = input("Enter the year or range as [year from]:[year to] (or exit for end) :")

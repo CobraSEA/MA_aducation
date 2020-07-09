@@ -1,7 +1,8 @@
 import string
 users = {'Tom':'rtyf&', 'John':'876', 'Fil':'8ui@'}
 #STR_P = set(list(string.punctuation))
-STR_P = {x for x in string.punctuation}
+#STR_P = {x for x in string.punctuation}
+STR_P = set(string.punctuation)
 try:
     login = input('Login:')
     if len(login) == 0:
