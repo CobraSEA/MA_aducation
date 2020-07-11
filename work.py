@@ -33,7 +33,7 @@ password = 'sdsds'
 #print(STR_P)
 #STR_P = set("string")
 #print(STR_P)
-'''
+
 
 def spam():
     cnt = 0
@@ -43,3 +43,11 @@ def spam():
 reg = spam()
 for x in range(10):
     print(next(reg), end=' ')
+'''
+a = {'a':1, 'b':2}
+b = [6, 7, 8, 'Yes', 'No']
+L = [lambda x: x ** 2, lambda x: x ** 3, lambda x: x ** 4]
+
+for f in L:
+    print(f(2))
+    print(L[0](3))
