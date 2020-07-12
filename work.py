@@ -66,6 +66,7 @@ for i in t:
 '''
 
 L = [2, 4, 6, 8]
+D = [1, 3, 6, 8]
 
 def l_add(a, b=0, lst=[]):
     if lst:
