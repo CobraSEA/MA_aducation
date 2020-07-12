@@ -63,7 +63,7 @@ def fib(n):
 t = fib(10)
 for i in t:
     print(i)
-'''
+
 
 L = [2, 4, 6, 8]
 D = [1, 3, 6, 8]
@@ -78,3 +78,17 @@ def l_add(a, b=0, lst=[]):
 print(L)
 print(l_add(L, lst=[1, 3, 5, 7]))
 print(l_add(L, 10))
+'''
+def greetings(name):
+    return "Hello " + name
+
+greet_someone = greetings
+
+def greeting(func):
+    name = "Stiven"
+    result = greet_someone(name)
+    return result
+
+print(greetings("Mike"))
+print(greet_someone('Fil'))
+print(greeting("Mike"))
