@@ -9,5 +9,6 @@ for f in foo:
         odd_foo.append(f)
 print (odd_foo)
 
-print([i for i in range(1, 6) if (lambda x: x % 2 == 1)(i)])
 print([i for i in range(1, 6) if i % 2 == 1])
+print([i for i in range(1, 6) if (lambda x: x % 2 == 1)(i)])
+print(filter(lambda x: x % 2 == 1, [i for i in range(1, 6)]))

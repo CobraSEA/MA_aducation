@@ -1,18 +1,18 @@
 '''
 orbital radius mln km
 orbital speed mln km per day
-86400 sek = 1 day
+86400 sec = 1 day
 '''
 import math
 
-planets = {'Mercury':{'orbital_radius':58,  'orbital_speed':4.135968},
-             'Venus':{'orbital_radius':108, 'orbital_speed':3.025728},
-             'Earth':{'orbital_radius':150, 'orbital_speed':2.571264},
-              'Mars':{'orbital_radius':228, 'orbital_speed':2.084832},
-            'Upiter':{'orbital_radius':778, 'orbital_speed':1.129248},
-            'Saturn':{'orbital_radius':1429,'orbital_speed':0.835488},
-              'Uran':{'orbital_radius':2871,'orbital_speed':0.590976},
-            'Neptun':{'orbital_radius':4504,'orbital_speed':0.473472},
+planets = {'Mercury': {'orbital_radius': 58,   'orbital_speed': 4.135968},
+             'Venus': {'orbital_radius': 108,  'orbital_speed': 3.025728},
+             'Earth': {'orbital_radius': 150,  'orbital_speed': 2.571264},
+              'Mars': {'orbital_radius': 228,  'orbital_speed': 2.084832},
+            'Upiter': {'orbital_radius': 778,  'orbital_speed': 1.129248},
+            'Saturn': {'orbital_radius': 1429, 'orbital_speed': 0.835488},
+              'Uran': {'orbital_radius': 2871, 'orbital_speed': 0.590976},
+            'Neptun': {'orbital_radius': 4504, 'orbital_speed': 0.473472},
            }
 
 def orbit_len(orbit_rad):
