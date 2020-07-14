@@ -7,4 +7,5 @@ def func(word, name, *args, age=None):
     print(args)
 
 func(word, **ids)
-func(word, ids['name'], *list(range(10)))
+
+#func(word, ids['name'], *list(range(10)))
