@@ -1,24 +1,42 @@
-def func1(x):
-    return x * 2
+import functools
+def dec_prn_name(func):
+    print(func)
+    def his_add(name, sname='Connor'):
+        print(name)
+        return f'His {func(name, sname)}'
+    return his_add
 
+def dec2_prn_name(func):
+    def capit(name, sname='Connor'):
+        return func(name.capitalize(), sname.capitalize())
+    return capit
 
-def func3(*args):
-    return [x * 2 for x in args]
+@dec2_prn_name
+@dec_prn_name
+def print_name(name, sname='Connor'):
+    print(sname)
+    return "name is " + name + ' ' + sname
 
+#dec_func = dec_prn_name(print_name)
+print(print_name("john"))
 
-def a(**var):
-    """
+def do(x, y):
+    return x * y
 
-    :type var: dict
-    """
-    for i in var:
-        print(f'{i} = ', var[i])
+def red(func, coll):
+    L = coll[0]
+    for i in coll[1:]:
+        L = func(L, i)
+    return L
 
-print(func1(13))
-print(func3(1, 2, 3, 7, 12))
+s = [1,2,3,4]
+print(functools.reduce(do, s))
+print(red(do, s))
+#print(list(map(do, s)))
 
-vars = dict(one=1, two=2, zero=0)
-#a(one=4, two=2, zero=0)
-a(**vars)
+#x = 4
+def ff():
+    pass
+print(ff())
+print(print())
 
-# enumerate([])

@@ -4,5 +4,12 @@ def enumerator(lst):
     for l in lst:
         yield lst.index(l) + 1, l
 
+
 for i in enumerator(ls):
-    print(i)
+    print(i, end=' ')
+
+print()
+for i in enumerate(ls):
+    print(i, end=' ')
+print()
+
