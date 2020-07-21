@@ -50,5 +50,5 @@ def fact1(n):
     return reduce(mul, range(1, n + 1))
 
 print(fact(4))
-print(fact1(4))
+print(fact1(5))
 print(factorial(4))
