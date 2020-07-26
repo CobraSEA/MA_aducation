@@ -7,25 +7,26 @@ def rec_fact(n):
     return n * rec_fact(n - 1) if n > 1 else n
 
 
-def func_kw(**kwargs):
-    for k, v in kwargs.items():
-        print(f'Arg {k} = {v}')
+#def func_kw(**kwargs):
+def func_kw(*, foo=None):
+    #for k, v in kwargs.items():
+        print(f'foo = {foo}')
 
 
 def mult(x, y):
     return x * y
 
-#func_kw(foo='bar', num=9)
-#print(rec_fact(5))
+func_kw(foo=10)
+print(rec_fact(5))
 
 def run(func):
     print(func())
 f = partial(mult, 3)
-#print(f(2))
+print(f(2))
 
 cityes = namedtuple('City', 'contry square population')
-#aircrafts = NamedTuple('aircarft', model=str, seats=int, range=int)
-aircrafts = NamedTuple('aircarft', [('model', str), ('seats', int), ('range', int)])
+aircrafts = NamedTuple('aircarft', model=str, seats=int, range=int)
+#aircrafts = NamedTuple('aircarft', [('model', str), ('seats', int), ('range', int)])
 
 Kyiv = cityes('Ukraine', 839, 3.4)
 Lviv = cityes('Ukraine', 182, 0.724)
@@ -46,8 +47,8 @@ print(B739er)
 def fibo_c(func):
     fib_list = {}
     def cash(n):
-        result = func(n)
         if n not in fib_list.keys():
+            result = func(n)
             fib_list.update({n: result})
             print(fib_list)
             return result
@@ -66,6 +67,10 @@ def fibo(n):
 def fibo_lru(n):
     return n if n < 2 else fibo_lru(n - 2) + fibo_lru(n - 1)
 
-print(fibo(6))
+#print(fibo(6))
 print(fibo_lru(6))
 print(fibo_lru.cache_info())
+
+
+fib_func = fibo_lru.__wrapped__
+print(fib_func(6))
