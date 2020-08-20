@@ -34,4 +34,4 @@ os.mkdir('Temp')
 print([name for name in os.listdir(wrkdir) if name == 'Temp'])
 os.rmdir('Temp')
 
-od.path
+os.path

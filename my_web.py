@@ -17,11 +17,6 @@ for line in link_lines:
 #print(content)
 
 
-
-
-
-
-
 # for i in s.iter_lines():
 #    if 'http:/' in str(i):
         #print(str(i))
