@@ -20,3 +20,9 @@ c = ml_lst(b, a)
 print(c)
 
 print(reduce(mul, a))
+
+def xo(s):
+    s = s.lower()
+    return s.count('x') == s.count('o')
+
+print(xo('fooxX'))

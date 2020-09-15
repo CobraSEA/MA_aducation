@@ -18,7 +18,7 @@ class Father(ABC):
         pass
 
     def loaded(self):
-        return len(self.lst) > 0
+        return bool(self.lst)
 
     def inspect(self):
         return tuple(sorted(self.lst))
@@ -134,6 +134,7 @@ c2 = NoChange([5])
 c3 = NoChange([3, 2])
 #  c1.load([2, 3, 4, 5])
 c3.load([0, 5, 9, 3])
+
 print(f'c0 = {c0}')
 print(f'c1 = {c1}')
 print(f'c2 = {c2}')

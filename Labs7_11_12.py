@@ -11,6 +11,10 @@ class Building:
         else:
             self.place = 'Remote warehouse'
 
+    @property   # lab 7.41
+    def number(self):
+        return self._number
+
 class Building2:
 
     @staticmethod
@@ -26,15 +30,23 @@ class Building2:
         self.material = material
         self.color = color
         self._number = number
-        self.place = self._set_place(number)
+        self.place = self._set_place(self._number)
 
     def plus(self, number):
         self._number += number
-        self.place = self._set_place(number)
+        self.place = self._set_place(self._number)
 
     def minus(self, number):
         self._number -= number
-        self.place = self._set_place(number)
+        self.place = self._set_place(self._number)
+
+    @property  # lab 7.41
+    def number(self):
+        return self._number
+
+    @number.setter  # lab 7.42
+    def number(self, num):
+        self._number = num
 
     def __str__(self):
         return f'\n Obj {self.__class__.__name__} ' \
@@ -52,3 +64,6 @@ if __name__ == '__main__':
     b1.plus(50)
     b2.minus(3)
     print(b1, b2)
+    print(a.number)
+    b1.number = 3000
+    print(b1.number)
